@@ -29,7 +29,7 @@ library(ggplot2)      # Visualization library for plots
 library(viridis)      # Color scales for ggplot2
 library(cowplot)      # Additional plotting functions
 library(ggsci)        # Scientific color palettes
-library(statmod)      # Statistical modeling
+# library(statmod)      # Statistical modeling
 library(plotly)
 ```
 
