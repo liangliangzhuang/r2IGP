@@ -380,6 +380,7 @@ E_z <- function(serial, model, method = "gl", period = c(0, 1), par1, gamma_par 
 #'
 #' @export
 #' @import utils
+#' @importFrom  stats uniroot
 EM <- function(data, par0, types, tol1 = 0.001, max_iter, t_list, u_list, model,
                n_points = n_points, n_samples = 100, n_intervals = NULL, approx.method,
                period = c(0, 1), show_progress = TRUE) {
@@ -702,7 +703,7 @@ EM <- function(data, par0, types, tol1 = 0.001, max_iter, t_list, u_list, model,
 #' @return A `ggplot` object containing the plot of the EM iteration results.
 #'
 #' @export
-#' @import tidyverse ggsci latex2exp
+#' @import tidyverse ggsci
 EM_iter_plot <- function(em_par, par, ncol = 4, ture_value = TRUE,
                          orders, f_names) {
   # em_para$par_re[1:em_para$iter,] EM算法的迭代结果。
@@ -727,7 +728,7 @@ EM_iter_plot <- function(em_par, par, ncol = 4, ture_value = TRUE,
       geom_hline(data = dummy, aes(yintercept = Z), linetype = "dashed") +
       theme_bw() +
       theme(panel.grid = element_blank(), legend.position = "none") +
-      xlab(latex2exp::TeX(r'(Iteration($\times 10^{2}$))')) +
+      xlab("Iteration x 100") +
       ylab("Value")
   } else {
     p1 <- ggplot(d1, aes(index / 100, value, color = para)) +
@@ -736,7 +737,7 @@ EM_iter_plot <- function(em_par, par, ncol = 4, ture_value = TRUE,
       scale_color_aaas(name = "Parameters") +
       theme_bw() +
       theme(panel.grid = element_blank(), legend.position = "none") +
-      xlab(latex2exp::TeX(r'(Iteration($\times 10^{2}$))')) +
+      xlab("Iteration x 100") +
       ylab("Value")
   }
   # ggsave("figures/EM-plot.pdf", p1, width = 9, height = 6)

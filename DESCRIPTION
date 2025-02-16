@@ -20,18 +20,17 @@ Imports:
     dplyr,
     foreach,
     doParallel,
-    numDeriv,
     utils,
     SuppDists,
     tidyverse,
     ggplot2,
     forcats,
-    plotly,
     magrittr,
-    latex2exp,
-    statmod,
     stats,
-    viridis
+    viridis,
+    plotly,
+    cowplot,
+    kableExtra
 RoxygenNote: 7.3.1
 Biarch: true
 SystemRequirements: GNU make, pandoc (>= 1.12.3), pandoc-citeproc

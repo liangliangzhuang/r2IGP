@@ -29,7 +29,7 @@
 #'   - `BT_para`: A matrix containing the parameter estimates from each bootstrap iteration.
 #'
 #' @export
-#' @importFrom stats rnorm na.omit quantile sd
+#' @importFrom stats rnorm na.omit quantile sd optim
 #' @import foreach
 #' @import doParallel
 

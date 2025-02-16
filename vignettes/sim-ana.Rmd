@@ -29,8 +29,8 @@ library(ggplot2)      # Visualization library for plots
 library(viridis)      # Color scales for ggplot2
 library(cowplot)      # Additional plotting functions
 library(ggsci)        # Scientific color palettes
-library(latex2exp)    # LaTeX formatting in plots
 library(statmod)      # Statistical modeling
+library(plotly)
 ```
 
 
@@ -94,6 +94,9 @@ path_re <- degradation.path.plot.summary(
 cowplot::plot_grid(plotlist = path_re)
 ```
 
+```{r}
+# path.3D.plot(model="M0", units = 10, time = t, cycles = u, loss = sim_dat$Y_t) 
+```
 
 ## Statistical Inference
 

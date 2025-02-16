@@ -111,7 +111,10 @@ degradation.path.plot.summary <- function(data = sim_dat$diff_Y_t, model, t = t,
 #' @param loss Matrix of loss values, typically from `sim_dat$Y_t`.
 #'
 #' @return A 3D plot using `plot_ly`.
-#' @import plotly RColorBrewer
+#' @importFrom RColorBrewer brewer.pal
+#' @importFrom plotly plot_ly
+#' @importFrom plotly add_trace
+#' @importFrom plotly layout
 #' @export
 path.3D.plot <- function(model, units = 10, time = t, cycles = u, loss = sim_dat$Y_t) {
   if (model %in% c("M0", "M1", "M2")) {
@@ -169,13 +172,12 @@ path.3D.plot <- function(model, units = 10, time = t, cycles = u, loss = sim_dat
     }
 
     # Customize layout with axis labels and camera angle
-    p <- layout(p,
-      scene = list(
-        xaxis = list(title = "Cycles", range = c(0, max(cycles))),
-        yaxis = list(title = "Time (Days)", range = c(0, max(time))),
-        zaxis = list(title = "Capacity Loss (x 100%)"),
-        camera = list(eye = list(x = -1, y = -1.5, z = 2))
-      ),
+    p <- plotly::layout(p,
+      # scene = list(
+      #   xaxis = list(title = "Cycles", range = c(0, max(cycles))),
+      #   yaxis = list(title = "Time (Days)", range = c(0, max(time))),
+      #   zaxis = list(title = "Capacity Loss (x 100%)")
+      # ),
       legend = list(x = 0.7, y = 0.7, xanchor = "center", yanchor = "middle")
     )
 

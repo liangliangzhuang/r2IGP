@@ -3,9 +3,10 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/liangliangzhuang/r2IGP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/liangliangzhuang/r2IGP/actions/workflows/R-CMD-check.yaml)
-[![Codecov test
-coverage](https://codecov.io/gh/liangliangzhuang/r2IGP/graph/badge.svg)](https://app.codecov.io/gh/liangliangzhuang/r2IGP)
+<!-- [![R-CMD-check](https://github.com/liangliangzhuang/r2IGP/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/liangliangzhuang/r2IGP/actions/workflows/R-CMD-check.yaml) -->
+
+<!-- [![Codecov test coverage](https://codecov.io/gh/liangliangzhuang/r2IGP/graph/badge.svg)](https://app.codecov.io/gh/liangliangzhuang/r2IGP) -->
+
 <!-- badges: end -->
 
 ## Overview
