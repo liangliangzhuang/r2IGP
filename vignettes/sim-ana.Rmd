@@ -113,7 +113,7 @@ init_params_seq <- list(
 model_seq <- c("M0", "M1", "M2", "M3", "M4")
 
 # Parameter settings
-max_iter <- 50      # Maximum number of EM iterations
+max_iter <- 5      # Maximum number of EM iterations
 tol1 <- 10^-4       # Tolerance level
 gl_point <- 30      # Number of points for Gauss-Legendre method
 approx.method <- "gl" # Use Gauss-Legendre Quadrature method
