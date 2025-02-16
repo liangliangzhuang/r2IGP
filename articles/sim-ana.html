@@ -72,7 +72,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Simulation data analysis</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/liangliangzhuang/r2IGP/blob/HEAD/vignettes/sim-ana.Rmd" class="external-link"><code>vignettes/sim-ana.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/liangliangzhuang/r2IGP/blob/main/vignettes/sim-ana.Rmd" class="external-link"><code>vignettes/sim-ana.Rmd</code></a></small>
       <div class="d-none name"><code>sim-ana.Rmd</code></div>
     </div>
 
@@ -93,8 +93,8 @@ reliability analysis.</p>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://sjmgarnier.github.io/viridis/" class="external-link">viridis</a></span><span class="op">)</span>      <span class="co"># Color scales for ggplot2</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/cowplot/" class="external-link">cowplot</a></span><span class="op">)</span>      <span class="co"># Additional plotting functions</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://nanx.me/ggsci/" class="external-link">ggsci</a></span><span class="op">)</span>        <span class="co"># Scientific color palettes</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://www.stefanom.io/latex2exp/" class="external-link">latex2exp</a></span><span class="op">)</span>    <span class="co"># LaTeX formatting in plots</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">statmod</span><span class="op">)</span>      <span class="co"># Statistical modeling</span></span></code></pre></div>
+<span><span class="co"># library(statmod)      # Statistical modeling</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://plotly-r.com" class="external-link">plotly</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="parameter-setting">Parameter Setting<a class="anchor" aria-label="anchor" href="#parameter-setting"></a>
 </h2>
@@ -155,6 +155,8 @@ the final observed degradation data.</p>
 <span><span class="co"># Display the plots</span></span>
 <span><span class="fu">cowplot</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html" class="external-link">plot_grid</a></span><span class="op">(</span>plotlist <span class="op">=</span> <span class="va">path_re</span><span class="op">)</span></span></code></pre></div>
 <p><img src="sim-ana_files/figure-html/unnamed-chunk-5-1.png" width="576" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># path.3D.plot(model="M0", units = 10, time = t, cycles = u, loss = sim_dat$Y_t) </span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="statistical-inference">Statistical Inference<a class="anchor" aria-label="anchor" href="#statistical-inference"></a>
@@ -167,7 +169,7 @@ the final observed degradation data.</p>
 integration. Other methods like <em>Trapezoidal Approximation</em>
 (<code><a href="../reference/trapezoidal_integral.html">trapezoidal_integral()</a></code>) and <em>Monte Carlo
 Integration</em> (<code><a href="../reference/mc_integral.html">mc_integral()</a></code>) are also available.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Define initial parameter values for different models</span></span>
 <span><span class="va">init_params_seq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
 <span>  <span class="st">"M0"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">6</span><span class="op">)</span>, <span class="st">"M1"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span>,</span>
@@ -189,7 +191,7 @@ Integration</em> (<code><a href="../reference/mc_integral.html">mc_integral()</a
 <span><span class="va">t_seq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">t_list</span>, <span class="va">t_list</span>, <span class="va">t_list</span>, <span class="va">t_list</span>, <span class="va">u_list</span>, <span class="va">t_list</span>, <span class="va">u_list</span><span class="op">)</span> </span></code></pre></div>
 <p>We initialize parameters for different models based on their
 parameter structures and perform the EM algorithm.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Define initial guesses for each model</span></span>
 <span><span class="va">init_params_seq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
 <span>  <span class="st">"M0"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">6</span><span class="op">)</span>, <span class="st">"M1"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span>, </span>
@@ -213,7 +215,7 @@ function is used for maximum likelihood estimation. The results are
 stored in <code>em_para_re</code>, and if any errors occur during the
 estimation, they are handled with <code><a href="https://rdrr.io/r/base/conditions.html" class="external-link">tryCatch()</a></code>, ensuring that
 the process continues even if some models fail to converge.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">data_store</span> <span class="op">&lt;-</span> <span class="va">data_detail</span> <span class="op">&lt;-</span> <span class="va">em_para</span> <span class="op">&lt;-</span> <span class="va">em_iter_list</span> <span class="op">&lt;-</span> <span class="va">inti_par</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">em_para_re</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html" class="external-link">vector</a></span><span class="op">(</span><span class="st">"list"</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">model_seq</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -322,7 +324,7 @@ to their needs.</p>
 <h3 id="log-likelihood-and-aic-calculation">Log-Likelihood and AIC Calculation<a class="anchor" aria-label="anchor" href="#log-likelihood-and-aic-calculation"></a>
 </h3>
 <p>Log-likelihood and AIC are calculated for model comparison.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">loglik</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="kw">for</span> <span class="op">(</span><span class="va">q</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">model_seq</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">loglik</span><span class="op">[</span><span class="va">q</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span></span>
@@ -339,14 +341,14 @@ to their needs.</p>
 <span><span class="co"># AIC computation</span></span>
 <span><span class="va">aic</span> <span class="op">&lt;-</span> <span class="fl">2</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">em_para_re</span>, <span class="va">length</span><span class="op">)</span><span class="op">)</span> <span class="op">-</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">loglik</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/which.min.html" class="external-link">which.min</a></span><span class="op">(</span><span class="va">aic</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 1</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] 6</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="final-results">Final Results<a class="anchor" aria-label="anchor" href="#final-results"></a>
 </h3>
 <p>The final estimated parameters, log-likelihood, and AIC values are
 presented in a summarized table.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Store and display final results</span></span>
 <span><span class="va">sim_para</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  <span class="st">"M0"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/append.html" class="external-link">append</a></span><span class="op">(</span><span class="va">em_para_re</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>, <span class="cn">NA</span>, after <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>,</span>
@@ -393,68 +395,68 @@ presented in a summarized table.</p>
 <tbody>
 <tr class="odd">
 <td align="left">M0</td>
-<td align="right">1.224</td>
-<td align="right">4.257</td>
-<td align="right">0.730</td>
-<td align="right">1.556</td>
 <td align="right">NA</td>
-<td align="right">5.601</td>
-<td align="right">0.286</td>
-<td align="right">-112.513</td>
-<td align="right">239.026</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="even">
 <td align="left">M1</td>
-<td align="right">1.215</td>
-<td align="right">4.232</td>
-<td align="right">0.724</td>
-<td align="right">1.542</td>
-<td align="right">5.352</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
-<td align="right">-117.381</td>
-<td align="right">248.762</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">M2</td>
-<td align="right">1.222</td>
-<td align="right">4.254</td>
-<td align="right">0.729</td>
-<td align="right">1.555</td>
 <td align="right">NA</td>
-<td align="right">5.384</td>
-<td align="right">0.061</td>
-<td align="right">-120.075</td>
-<td align="right">254.150</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="even">
 <td align="left">M3t</td>
-<td align="right">0.990</td>
-<td align="right">0.618</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
-<td align="right">2.507</td>
-<td align="right">0.108</td>
-<td align="right">-168.955</td>
-<td align="right">351.910</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">M3u</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
-<td align="right">1.092</td>
-<td align="right">7.215</td>
 <td align="right">NA</td>
-<td align="right">4.440</td>
-<td align="right">0.219</td>
-<td align="right">-387.862</td>
-<td align="right">789.724</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="even">
 <td align="left">M4t</td>
 <td align="right">1.091</td>
-<td align="right">6.590</td>
+<td align="right">6.59</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">4.029</td>

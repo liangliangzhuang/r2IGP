@@ -1,9 +1,9 @@
-pandoc: '3.5'
+pandoc: 3.1.11
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   sim-ana: sim-ana.html
-last_built: 2025-02-16T13:02Z
+last_built: 2025-02-16T14:38Z
 urls:
   reference: https://liangliangzhuang.github.io/r2IGP/reference
   article: https://liangliangzhuang.github.io/r2IGP/articles
