@@ -1,0 +1,46 @@
+Package: r2IGP
+Type: Package
+Title: Reliability Analysis and Degradation Modeling Using Two-Scale Reparameterized Inverse Gaussian Processes
+Version: 0.1.0
+Authors@R: c(
+ person("Liangliang", "Zhuang", , "liangliangzhuang1997@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-4450-5513"))
+        )
+Maintainer: Liangliang Zhuang <liangliangzhuang1997@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 3.6.0),
+Imports: 
+    RColorBrewer, 
+    ggsci,
+    dplyr,
+    foreach,
+    doParallel,
+    numDeriv,
+    utils,
+    SuppDists,
+    tidyverse,
+    ggplot2,
+    forcats,
+    plotly,
+    magrittr,
+    latex2exp,
+    statmod,
+    stats,
+    viridis
+RoxygenNote: 7.3.1
+Biarch: true
+SystemRequirements: GNU make, pandoc (>= 1.12.3), pandoc-citeproc
+Suggests: 
+    covr,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+URL: https://liangliangzhuang.github.io/r2IGP/
+BugReports: https://github.com/liangliangzhuang/r2IGP/issues
