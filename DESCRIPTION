@@ -28,9 +28,7 @@ Imports:
     magrittr,
     stats,
     viridis,
-    plotly,
-    cowplot,
-    kableExtra
+    plotly
 RoxygenNote: 7.3.1
 Biarch: true
 SystemRequirements: GNU make, pandoc (>= 1.12.3), pandoc-citeproc

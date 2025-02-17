@@ -31,6 +31,7 @@ library(cowplot)      # Additional plotting functions
 library(ggsci)        # Scientific color palettes
 # library(statmod)      # Statistical modeling
 library(plotly)
+library(kableExtra)
 ```
 
 
