@@ -89,8 +89,6 @@ fit.path.plot <- function(dat, True_Y, t_list, u_list, select_ID, types, ci = TR
         panel.grid = element_blank(),
         axis.text.x = element_text(family = "serif", size = 10),
         axis.text.y = element_text(family = "serif", size = 10),
-        axis.title.x = element_text(family = "serif", size = 12), # 设置 X 轴标题字体
-        axis.title.y = element_text(family = "serif", size = 12), # 设置 Y 轴标题字体
         legend.title = element_text(family = "serif", size = 12),
         legend.text = element_text(family = "serif", size = 10)
       ) # 设置图例标签的字体)
@@ -115,11 +113,7 @@ fit.path.plot <- function(dat, True_Y, t_list, u_list, select_ID, types, ci = TR
       theme(
         panel.grid = element_blank(),
         axis.text.x = element_text(family = "serif", size = 10),
-        axis.text.y = element_text(family = "serif", size = 10),
-        axis.title.x = element_text(family = "serif", size = 12), # 设置 X 轴标题字体
-        axis.title.y = element_text(family = "serif", size = 12), # 设置 Y 轴标题字体
-        legend.title = element_text(family = "serif", size = 12),
-        legend.text = element_text(family = "serif", size = 10)
+        axis.text.y = element_text(family = "serif", size = 10)
       )
   }
   return(p1)
