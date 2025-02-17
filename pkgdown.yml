@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   sim-ana: sim-ana.html
-last_built: 2025-02-17T10:51Z
+last_built: 2025-02-17T11:31Z
 urls:
   reference: https://liangliangzhuang.github.io/r2IGP/reference
   article: https://liangliangzhuang.github.io/r2IGP/articles
