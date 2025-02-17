@@ -381,6 +381,7 @@ E_z <- function(serial, model, method = "gl", period = c(0, 1), par1, gamma_par 
 #' @export
 #' @import utils
 #' @importFrom  stats uniroot
+#' @importFrom statmod gauss.quad
 EM <- function(data, par0, types, tol1 = 0.001, max_iter, t_list, u_list, model,
                n_points = n_points, n_samples = 100, n_intervals = NULL, approx.method,
                period = c(0, 1), show_progress = TRUE) {

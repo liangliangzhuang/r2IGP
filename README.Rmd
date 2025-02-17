@@ -79,10 +79,11 @@ Other functions for likelihood evaluation include `f_uz_given_D_gaussian()`, `Lo
 
 - **Interval estimation**: Interval estimates for the models are computed using bootstrap methods in `CI_Bootstrap()`, with support for parallel computing to accelerate execution.
 
-- **Plotting**:  Contains various visualization functions, primarily for displaying degradation paths and EM iteration progress. Notable functions include `path.3D.plot()`, `fit.path.plot()`, `degradation.path.plot.summary()`, and `EM_iter_plot()`.  
+- **Plotting**: Contains various visualization functions, primarily for displaying degradation paths and EM iteration progress. Notable functions include `path.3D.plot()`, `fit.path.plot()`, `degradation.path.plot.summary()`, and `EM_iter_plot()`.  
+
+- **Reliability**: Contains functions for reliability analysis, focusing on the computation of reliability over time based on different models. The two key functions are: `uncon_lifetime_CDF()`, `Reliability()`.
 
 - **Miscellaneous**: Others functions contain such as `selected_fun()` and `save.result()`.
-
 
 
 <!-- ## Articles -->

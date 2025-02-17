@@ -86,6 +86,10 @@ Other functions for likelihood evaluation include
   functions include `path.3D.plot()`, `fit.path.plot()`,
   `degradation.path.plot.summary()`, and `EM_iter_plot()`.
 
+- **Reliability**: Contains functions for reliability analysis, focusing
+  on the computation of reliability over time based on different models.
+  The two key functions are: `uncon_lifetime_CDF()`, `Reliability()`.
+
 - **Miscellaneous**: Others functions contain such as `selected_fun()`
   and `save.result()`.
 

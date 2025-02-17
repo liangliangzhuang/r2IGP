@@ -29,7 +29,7 @@ library(ggplot2)      # Visualization library for plots
 library(viridis)      # Color scales for ggplot2
 library(cowplot)      # Additional plotting functions
 library(ggsci)        # Scientific color palettes
-# library(statmod)      # Statistical modeling
+library(statmod)      # Statistical modeling
 library(plotly)
 library(kableExtra)
 ```
@@ -84,7 +84,7 @@ sim_dat <- sim.dat.path(
 
 The degradation paths can be visualized. The left plot shows the effects of two scales on product degradation, while the right plot shows the final observed degradation data.
 
-```{r fig.height=4, fig.width=6}
+```{r fig.height=4, fig.width=6, fig.cap="Degradation path."}
 # Visualize degradation paths
 path_re <- degradation.path.plot.summary(
   model = "M0",
