@@ -29,6 +29,7 @@ Imports:
     stats,
     viridis,
     plotly,
+    cowplot,
     statmod
 RoxygenNote: 7.3.1
 Biarch: true
