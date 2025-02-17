@@ -1,7 +1,10 @@
 url: https://liangliangzhuang.github.io/r2IGP/
 authors:
+  Ancha Xu:
+    href: https://xu-ancha.github.io/
   Liangliang Zhuang:
     href: https://zll-blog.netlify.app/
+
 template:
   bootstrap: 5
   math-rendering: mathjax

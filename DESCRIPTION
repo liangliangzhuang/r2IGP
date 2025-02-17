@@ -4,7 +4,9 @@ Title: Reliability Analysis and Degradation Modeling Using Two-Scale Reparameter
 Version: 0.1.0
 Authors@R: c(
  person("Liangliang", "Zhuang", , "liangliangzhuang1997@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-4450-5513"))
+           comment = c(ORCID = "0000-0003-4450-5513")),
+ person("Ancha", "Xu", , "xuancha@mail.zjgsu.edu.cn", role = "aut",
+           comment = c(ORCID = "0000-0003-3289-2720"))
         )
 Maintainer: Liangliang Zhuang <liangliangzhuang1997@gmail.com>
 Description: More about what it does (maybe more than one line)
@@ -34,7 +36,7 @@ Imports:
     kableExtra
 RoxygenNote: 7.3.1
 Biarch: true
-SystemRequirements: GNU make, pandoc (>= 1.12.3), pandoc-citeproc
+SystemRequirements: pandoc
 Suggests: 
     covr,
     knitr,
