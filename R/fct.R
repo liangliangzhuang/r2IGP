@@ -175,11 +175,11 @@ sim.dat.path <- function(model = "M0", type, m, n, t, u, par, gamma = 1) {
     colnames(diff_Y_t) <- paste("n", 1:n, sep = "")
 
     Y_t <- apply(diff_Y_t, 2, cumsum)
-    colnames(Y_t) <- paste("n", 1:n, sep = "") # 累乘求退化量
+    colnames(Y_t) <- paste("n", 1:n, sep = "")
     X_t <- apply(diff_X_t, 2, cumsum)
-    colnames(X_t) <- paste("n", 1:n, sep = "") # 累乘求退化量
+    colnames(X_t) <- paste("n", 1:n, sep = "")
     Z_t <- apply(diff_Z_t, 2, cumsum)
-    colnames(Z_t) <- paste("n", 1:n, sep = "") # 累乘求退化量
+    colnames(Z_t) <- paste("n", 1:n, sep = "")
   } else if (model == "M3") {
     Lambda_t <- list()
     diff_Y_t <- Y_t <- matrix(NA, m, n)
@@ -190,7 +190,7 @@ sim.dat.path <- function(model = "M0", type, m, n, t, u, par, gamma = 1) {
         diff_Y_t[j, i] <- rrIG(1, Lambda_t[[i]][j], gamma[i]) # X
       }
     }
-    Y_t <- apply(diff_Y_t, 2, cumsum) # 累乘求退化量
+    Y_t <- apply(diff_Y_t, 2, cumsum)
     X_t <- Z_t <- diff_X_t <- diff_Z_t <- Lambda_u <- NA
   } else if (model == "M4") {
     Lambda_t <- list()

@@ -28,7 +28,8 @@ Imports:
     magrittr,
     stats,
     viridis,
-    plotly
+    plotly,
+    statmod
 RoxygenNote: 7.3.1
 Biarch: true
 SystemRequirements: GNU make, pandoc (>= 1.12.3), pandoc-citeproc
